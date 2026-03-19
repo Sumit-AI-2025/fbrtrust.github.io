@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FBR Trust — Foundation for Bull Rehabilitation & Charitable Trust</title>
+<meta name="description" content="Rehabilitating displaced bulls through clean energy, organic farming, and rural employment. Varanasi & Vadodara, India.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --green:   #1A6B3C;
+    --green2:  #2d8a55;
+    --amber:   #C17D2A;
+    --cream:   #F7F3EC;
+    --dark:    #1a1a14;
+    --muted:   #6b6b58;
+    --border:  rgba(26,107,60,0.15);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--dark);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* ── background texture ── */
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background-image:
+      radial-gradient(ellipse 80% 60% at 10% 20%, rgba(26,107,60,0.06) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 80% at 90% 80%, rgba(193,125,42,0.06) 0%, transparent 60%),
+      url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231A6B3C' fill-opacity='0.025'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .wrap {
+    position: relative; z-index: 1;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  /* ── NAV ── */
+  nav {
+    padding: 2rem 0 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border);
+    animation: fadeDown 0.8s ease both;
+  }
+  .logo {
+    display: flex; align-items: center; gap: 12px;
+  }
+  .logo-icon {
+    width: 42px; height: 42px;
+    background: var(--green);
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .logo-icon svg { width: 24px; height: 24px; }
+  .logo-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--green);
+  }
+  .logo-text span {
+    display: block;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 400;
+    color: var(--muted);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .nav-tag {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--amber);
+    background: rgba(193,125,42,0.1);
+    border: 1px solid rgba(193,125,42,0.25);
+    padding: 6px 14px;
+    border-radius: 100px;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    padding: 5rem 0 4rem;
+    animation: fadeUp 1s ease 0.2s both;
+  }
+  .hero-eyebrow {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 1.5rem;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .hero-eyebrow::before {
+    content: '';
+    display: block;
+    width: 32px; height: 1px;
+    background: var(--green);
+  }
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.8rem, 7vw, 5rem);
+    font-weight: 400;
+    line-height: 1.1;
+    color: var(--dark);
+    margin-bottom: 1.5rem;
+    max-width: 720px;
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--green);
+  }
+  .hero-sub {
+    font-size: 1.05rem;
+    font-weight: 300;
+    color: var(--muted);
+    line-height: 1.7;
+    max-width: 540px;
+    margin-bottom: 2.5rem;
+  }
+
+  /* ── COMING SOON BADGE ── */
+  .coming-badge {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: var(--green);
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 12px 22px;
+    border-radius: 100px;
+    margin-bottom: 3.5rem;
+  }
+  .coming-badge .dot {
+    width: 7px; height: 7px;
+    background: #7dffb3;
+    border-radius: 50%;
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  /* ── PILLARS GRID ── */
+  .pillars {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 4rem;
+    animation: fadeUp 1s ease 0.4s both;
+  }
+  .pillar {
+    background: var(--cream);
+    padding: 1.5rem;
+    transition: background 0.2s;
+  }
+  .pillar:hover { background: rgba(26,107,60,0.04); }
+  .pillar-icon {
+    font-size: 1.6rem;
+    margin-bottom: 0.6rem;
+    display: block;
+  }
+  .pillar-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--green);
+    margin-bottom: 0.3rem;
+  }
+  .pillar-desc {
+    font-size: 0.78rem;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  /* ── STATS ROW ── */
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    padding: 3rem 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 4rem;
+    animation: fadeUp 1s ease 0.5s both;
+  }
+  @media (max-width: 600px) {
+    .stats { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+  }
+  .stat-val {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: var(--green);
+    line-height: 1;
+    margin-bottom: 0.3rem;
+  }
+  .stat-label {
+    font-size: 0.75rem;
+    color: var(--muted);
+    line-height: 1.4;
+  }
+
+  /* ── CONTACT SECTION ── */
+  .contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 5rem;
+    animation: fadeUp 1s ease 0.6s both;
+  }
+  @media (max-width: 640px) {
+    .contact { grid-template-columns: 1fr; gap: 2rem; }
+    .hero h1 { font-size: 2.4rem; }
+    .stats { grid-template-columns: repeat(2,1fr); }
+  }
+  .contact-block h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 0.8rem;
+    color: var(--dark);
+  }
+  .contact-block p {
+    font-size: 0.88rem;
+    color: var(--muted);
+    line-height: 1.7;
+    margin-bottom: 1.2rem;
+  }
+  .contact-item {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 0.88rem;
+    color: var(--dark);
+    margin-bottom: 0.6rem;
+  }
+  .contact-item svg {
+    width: 16px; height: 16px;
+    color: var(--green); flex-shrink: 0;
+  }
+  .contact-item a {
+    color: var(--green);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .contact-item a:hover { text-decoration: underline; }
+
+  /* notify form */
+  .notify-form {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2rem;
+  }
+  .notify-form h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 0.4rem;
+  }
+  .notify-form p {
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin-bottom: 1.2rem;
+  }
+  .form-group {
+    display: flex; flex-direction: column; gap: 0.6rem;
+    margin-bottom: 0.8rem;
+  }
+  .form-group input {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem;
+    background: var(--cream);
+    color: var(--dark);
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .form-group input:focus { border-color: var(--green); }
+  .form-group input::placeholder { color: #aaa; }
+  .btn-notify {
+    width: 100%;
+    background: var(--green);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 11px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+  }
+  .btn-notify:hover { background: var(--green2); }
+  .btn-notify:active { transform: scale(0.98); }
+  .form-success {
+    display: none;
+    text-align: center;
+    padding: 1rem 0;
+    color: var(--green);
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  /* schemes strip */
+  .schemes {
+    background: rgba(26,107,60,0.05);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.2rem 1.5rem;
+    margin-bottom: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+    align-items: center;
+    animation: fadeUp 1s ease 0.65s both;
+  }
+  .schemes-label {
+    font-size: 0.72rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--green);
+    margin-right: 0.5rem;
+  }
+  .scheme-tag {
+    font-size: 0.72rem;
+    color: var(--muted);
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    padding: 4px 12px;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    animation: fadeUp 1s ease 0.7s both;
+  }
+  .footer-left {
+    font-size: 0.78rem;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+  .footer-left strong { color: var(--dark); }
+  .sdgs {
+    display: flex; gap: 6px; flex-wrap: wrap;
+  }
+  .sdg {
+    font-size: 0.65rem;
+    font-weight: 500;
+    background: var(--green);
+    color: white;
+    border-radius: 4px;
+    padding: 3px 8px;
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-16px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50%       { opacity: 0.5; transform: scale(0.8); }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <!-- NAV -->
+  <nav>
+    <div class="logo">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+          <polyline points="9 22 9 12 15 12 15 22"/>
+        </svg>
+      </div>
+      <div class="logo-text">
+        FBR Trust
+        <span>Foundation for Bull Rehabilitation</span>
+      </div>
+    </div>
+    <div class="nav-tag">🌱 Coming Soon</div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-eyebrow">Varanasi & Vadodara, India</div>
+    <h1>Turning displaced bulls into a <em>self-sustaining</em> rural economy</h1>
+    <p class="hero-sub">
+      FBR Trust rehabilitates abandoned bulls and cows through Bio-CNG energy, solar power, organic farming, and bike-mounted dairy collection — creating clean energy and dignified livelihoods for rural India.
+    </p>
+    <div class="coming-badge">
+      <span class="dot"></span>
+      Website launching soon — Grant Proposal 2025–26 active
+    </div>
+  </section>
+
+  <!-- PILLARS -->
+  <div class="pillars">
+    <div class="pillar">
+      <span class="pillar-icon">🐂</span>
+      <div class="pillar-title">Nandi Ghar</div>
+      <div class="pillar-desc">Scientific gaushala, 50+ acres, 1,000 animals, full veterinary care</div>
+    </div>
+    <div class="pillar">
+      <span class="pillar-icon">⚡</span>
+      <div class="pillar-title">Bio-CNG Plant</div>
+      <div class="pillar-desc">500 MT/day dung → ₹13 Cr/year revenue via SATAT/GAIL offtake</div>
+    </div>
+    <div class="pillar">
+      <span class="pillar-icon">🔆</span>
+      <div class="pillar-title">Bull Power (BPGS)</div>
+      <div class="pillar-desc">100 units, 600 MWh/year clean energy, ₹0 fuel cost</div>
+    </div>
+    <div class="pillar">
+      <span class="pillar-icon">☀️</span>
+      <div class="pillar-title">2 MW Solar</div>
+      <div class="pillar-desc">PM-KUSUM eligible, 60% subsidy, ₹3.5 Cr grid revenue/year</div>
+    </div>
+    <div class="pillar">
+      <span class="pillar-icon">🌾</span>
+      <div class="pillar-title">Organic Farm</div>
+      <div class="pillar-desc">50 acres, vermicompost 5,000 MT/year, export-ready produce</div>
+    </div>
+    <div class="pillar">
+      <span class="pillar-icon">🏍️</span>
+      <div class="pillar-title">Milk Collection</div>
+      <div class="pillar-desc">Bike-mounted dairy logistics, rural youth micro-franchise model</div>
+    </div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stats">
+    <div>
+      <div class="stat-val">₹58 Cr</div>
+      <div class="stat-label">Total project investment</div>
+    </div>
+    <div>
+      <div class="stat-val">3,382+</div>
+      <div class="stat-label">Jobs created (direct + indirect)</div>
+    </div>
+    <div>
+      <div class="stat-val">₹43.8 Cr</div>
+      <div class="stat-label">Revenue by Year 3</div>
+    </div>
+    <div>
+      <div class="stat-val">1,000</div>
+      <div class="stat-label">Animals rehabilitated per site</div>
+    </div>
+  </div>
+
+  <!-- CONTACT + FORM -->
+  <div class="contact">
+    <div class="contact-block">
+      <h2>Get in touch</h2>
+      <p>
+        We are actively seeking grants, CSR partnerships, and government scheme alignment for the 2025–26 pilot. Reach out to discuss how you can support India's most integrated bull rehabilitation model.
+      </p>
+      <div class="contact-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+        </svg>
+        <a href="mailto:info@fbrtrust.org">info@fbrtrust.org</a>
+      </div>
+      <div class="contact-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+        </svg>
+        <a href="https://www.fbrtrust.org">www.fbrtrust.org</a>
+      </div>
+      <div class="contact-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+        </svg>
+        CA Sumit Shrivastava, LLB — Founder-Trustee
+      </div>
+      <div class="contact-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+        </svg>
+        Vadodara, Gujarat &amp; Varanasi, Uttar Pradesh
+      </div>
+    </div>
+
+    <div class="notify-form" id="notifyForm">
+      <h3>Stay informed</h3>
+      <p>Get notified when we launch and receive our grant proposal document.</p>
+      <div class="form-group">
+        <input type="text" placeholder="Your name" id="nameInput">
+        <input type="email" placeholder="Email address" id="emailInput">
+        <input type="text" placeholder="Organisation (optional)" id="orgInput">
+      </div>
+      <button class="btn-notify" onclick="handleNotify()">Send me the proposal →</button>
+      <div class="form-success" id="formSuccess">
+        ✓ Thank you! We will be in touch at info@fbrtrust.org
+      </div>
+    </div>
+  </div>
+
+  <!-- SCHEMES STRIP -->
+  <div class="schemes">
+    <span class="schemes-label">Aligned schemes</span>
+    <span class="scheme-tag">Rashtriya Gokul Mission</span>
+    <span class="scheme-tag">GOBARDHAN</span>
+    <span class="scheme-tag">PM-KUSUM</span>
+    <span class="scheme-tag">SATAT / MoPNG</span>
+    <span class="scheme-tag">NABARD RIDF</span>
+    <span class="scheme-tag">MNRE Off-Grid</span>
+    <span class="scheme-tag">PMKVY</span>
+    <span class="scheme-tag">PKVY Organic</span>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-left">
+      <strong>Foundation for Bull Rehabilitation &amp; Charitable Trust</strong><br>
+      Registered under Indian Trusts Act &nbsp;|&nbsp; 12A &amp; 80G Applied<br>
+      Grant Proposal 2025–26 &nbsp;|&nbsp; info@fbrtrust.org
+    </div>
+    <div class="sdgs">
+      <span class="sdg">SDG 1</span>
+      <span class="sdg">SDG 2</span>
+      <span class="sdg">SDG 7</span>
+      <span class="sdg">SDG 8</span>
+      <span class="sdg">SDG 13</span>
+      <span class="sdg">SDG 15</span>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+function handleNotify() {
+  const name  = document.getElementById('nameInput').value.trim();
+  const email = document.getElementById('emailInput').value.trim();
+  if (!name || !email) {
+    alert('Please enter your name and email.');
+    return;
+  }
+  // Simple mailto fallback — sends to your inbox
+  const subject = encodeURIComponent('FBR Trust — Grant Proposal Request from ' + name);
+  const body    = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\nOrganisation: ' + document.getElementById('orgInput').value);
+  window.location.href = 'mailto:info@fbrtrust.org?subject=' + subject + '&body=' + body;
+  document.getElementById('formSuccess').style.display = 'block';
+}
+</script>
+
+</body>
+</html>
