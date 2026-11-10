@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Donate &amp; CSR — FBR Trust</title>
+<meta name="description" content="Donate to FBR Trust or partner with us through CSR to support bull rehabilitation, clean energy and rural livelihoods in Varanasi.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+<script src="site.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+  <div id="site-nav"></div>
+
+  <header class="page-head fade">
+    <div class="eyebrow">Donate &amp; CSR</div>
+    <h1>Your support gives an abandoned bull a <em>home</em></h1>
+    <p class="lead">Every contribution goes towards shelter, fodder, veterinary care and the systems that will make Nandi Ghar self-sustaining. Donations are eligible for tax benefit under Section 80G.</p>
+  </header>
+
+  <section class="block fade">
+    <div class="eyebrow">Ways to give</div>
+    <div class="grid grid-3">
+      <div class="card"><span class="icon">🌾</span><h3>Feed &amp; care</h3><p>Fodder, clean water and daily care for the animals in our shelter.</p></div>
+      <div class="card"><span class="icon">🩺</span><h3>Veterinary support</h3><p>Medicines, treatment of injured animals and regular health check-ups.</p></div>
+      <div class="card"><span class="icon">🏗️</span><h3>Build the future</h3><p>Sheds, biogas units and solar panels that make the shelter self-reliant.</p></div>
+    </div>
+  </section>
+
+  <section class="block fade" id="donate-now">
+    <div class="eyebrow">Donate now</div>
+    <h2>Bank transfer or <em>UPI</em></h2>
+    <p>Please donate only to the official account below, which is in the name of the Trust. FBR Trust is not registered under FCRA, so we can accept donations only from Indian sources, in Indian rupees.</p>
+    <div class="grid grid-2" style="margin-top:1.5rem">
+      <div class="card">
+        <h3>Bank transfer (NEFT / RTGS / IMPS)</h3>
+        <table class="details">
+          <tr><th>Account name</th><td>Foundation for Bull Rehabilitation &amp; Charitable Trust</td></tr>
+          <tr><th>Bank &amp; branch</th><td>Indian Overseas Bank, Karelibaug branch, Vadodara</td></tr>
+          <tr><th>Account number</th><td>186902000000689</td></tr>
+          <tr><th>IFSC</th><td>IOBA0001869</td></tr>
+          <tr><th>Account type</th><td>Current</td></tr>
+        </table>
+      </div>
+      <div class="card">
+        <h3>UPI — scan &amp; pay</h3>
+        <div class="upi-wrap">
+          <img class="upi-qr" src="images/upi-qr.png" alt="UPI QR code for donations to FBR Trust" width="190" height="190">
+          <div>
+            <table class="details">
+              <tr><th>UPI ID</th><td>PPQR01.SIISBM@iob</td></tr>
+              <tr><th>Payee name</th><td>Foundation for Bull Rehabilitation &amp; Charitable Trust</td></tr>
+              <tr><th>Bank</th><td>Indian Overseas Bank</td></tr>
+            </table>
+            <p style="margin-top:0.75rem;font-size:0.85rem">Works with Google Pay, PhonePe, Paytm, BHIM and all UPI apps.</p>
+          </div>
+        </div>
+        <a class="btn btn-amber upi-mobile" style="margin-top:1rem" href="upi://pay?pa=PPQR01.SIISBM@iob&amp;pn=PPQR01.SIISBM&amp;cu=INR">Pay with a UPI app →</a>
+        <p style="margin-top:1rem">On a computer, scan the QR with your phone. On a phone, tap the button above. Enter any amount you wish, and check that the payee shown is <strong>Foundation for Bull Rehabilitation</strong> before paying.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block fade" id="receipt">
+    <div class="eyebrow">Tax benefit</div>
+    <h2>Get your <em>80G</em> receipt</h2>
+    <div class="grid grid-2">
+      <div>
+        <p>After donating, send us your details so we can issue an 80G receipt and report your donation to the Income Tax Department, which allows the deduction to reflect against your PAN.</p>
+        <p>We need your full name, PAN, address, the amount, the date and the transaction reference.</p>
+        <p><strong>80G approval no.:</strong> <span class="placeholder">[Number &amp; validity]</span></p>
+        <p class="note">Cash donations above ₹2,000 are not eligible for 80G deduction. Please donate through banking channels.</p>
+      </div>
+      <div class="card">
+        <form class="form" id="receiptForm">
+          <label for="r-name">Full name</label>
+          <input id="r-name" required>
+          <label for="r-pan">PAN</label>
+          <input id="r-pan" maxlength="10" style="text-transform:uppercase" required>
+          <label for="r-amount">Amount (₹)</label>
+          <input id="r-amount" type="number" min="1" required>
+          <label for="r-ref">Transaction reference / UTR</label>
+          <input id="r-ref" required>
+          <label for="r-addr">Address</label>
+          <textarea id="r-addr" style="min-height:80px"></textarea>
+          <button type="submit" class="btn btn-green">Request receipt by email →</button>
+          <p class="note" style="margin-top:0">This opens your email app with the details filled in. Nothing is stored on this website.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="block fade" id="csr">
+    <div class="eyebrow">For companies</div>
+    <h2>Partner with us through <em>CSR</em></h2>
+    <p>Our work qualifies under Schedule VII of the Companies Act, 2013 — including animal welfare, environmental sustainability, rural development and livelihood enhancement. We offer structured, well-documented partnerships with clear reporting.</p>
+    <div class="grid grid-3" style="margin-top:1.5rem">
+      <div class="card"><h3>Project sponsorship</h3><p>Fund a defined part of a Nandi Ghar site — sheds, a biogas unit, solar panels or a veterinary unit.</p></div>
+      <div class="card"><h3>Animal adoption programme</h3><p>Sponsor the care of a set number of animals for a year, with periodic updates and photos.</p></div>
+      <div class="card"><h3>Livelihood &amp; skills</h3><p>Support training and employment for rural youth in farming, energy and dairy operations.</p></div>
+    </div>
+    <div class="card" style="margin-top:1.25rem">
+      <h3>What CSR partners receive</h3>
+      <ul>
+        <li>Utilisation certificate and audited accounts for the funded project</li>
+        <li>Quarterly progress reports with photographs and impact data</li>
+        <li>80G receipt where applicable, and site visits on request</li>
+        <li>CSR-1 registration no.: <span class="placeholder">[CSR00xxxxxx]</span></li>
+      </ul>
+    </div>
+    <div class="btn-row">
+      <a href="enquiry.html?topic=csr" class="btn btn-green">Discuss a CSR partnership →</a>
+      <a href="enquiry.html?topic=csr" class="btn btn-outline">Request the project report</a>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+</div>
+
+<script>
+document.getElementById('receiptForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+  const v = id => document.getElementById(id).value.trim();
+  const subject = encodeURIComponent('80G receipt request — ' + v('r-name'));
+  const body = encodeURIComponent(
+    'Name: ' + v('r-name') + '\nPAN: ' + v('r-pan').toUpperCase() +
+    '\nAmount: Rs ' + v('r-amount') + '\nTransaction ref: ' + v('r-ref') +
+    '\nAddress: ' + v('r-addr')
+  );
+  window.location.href = 'mailto:info@fbrtrust.org?subject=' + subject + '&body=' + body;
+});
+</script>
+</body>
+</html>
